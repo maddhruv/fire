@@ -1,0 +1,30 @@
+body {
+  overflow:hidden;
+
+  height: 100vh;
+  margin:0;
+
+  background: url(../images/bg-mac.jpg);
+  background-repeat: none;
+  background-size: cover;
+
+  font-family: 'Source Code Pro';
+}
+.topbar{
+  width:100%;
+  height: 23px;
+  padding-left: 25px;
+
+  background: rgba(255,255,255,0.8);
+
+  font-size: 20px;
+  line-height: 1.2;
+  -webkit-box-shadow: 3px 3px 50px 6px #696969;
+  -moz-box-shadow:    3px 3px 50px 6px #696969;
+  box-shadow:         3px 3px 50px 6px #696969;
+  z-index:999;
+}
+.mac-settings{
+  position: relative;
+  padding-left: 94%;
+}
