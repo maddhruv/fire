@@ -10,21 +10,75 @@ body {
 
   font-family: 'Source Code Pro';
 }
+
+/*topbar*/
 .topbar{
+  z-index:999;
+
   width:100%;
   height: 23px;
   padding-left: 25px;
 
+  opacity: 0.9;
   background: rgba(255,255,255,0.8);
-
-  font-size: 20px;
-  line-height: 1.2;
   -webkit-box-shadow: 3px 3px 50px 6px #696969;
   -moz-box-shadow:    3px 3px 50px 6px #696969;
   box-shadow:         3px 3px 50px 6px #696969;
-  z-index:999;
+
+  font-size: 20px;
+  line-height: 1.2;
+}
+.topbar-icons{
+  padding-top: 3px;
+
+  font-size: 0.8em;
+}
+.grey-text{
+  color: grey;
 }
 .mac-settings{
-  position: relative;
-  padding-left: 94%;
+  position: fixed;
+  right: 10px;
+}
+.mac-user{
+  position: fixed;
+  right: 40px;
+}
+.mac-search{
+  position: fixed;
+  right: 70px;
+}
+.mac-username{
+  position: fixed;
+  right: 100px;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*desktop*/
+button {
+  position: absolute;
+
+  margin: 30px;
+  padding: 10px;
+
+  cursor: pointer;
+
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: 0;
+  background: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px #333;
+
+  font-family: 'Open Sans', sans-serif;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+button span {
+  color: #FFF;
+  text-shadow: 0 0 8px #333;
+
+  font-size: 14px;
 }
