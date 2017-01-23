@@ -1,0 +1,10 @@
+title: Fire
+email: dhruvjainpenny@gmail.com
+description: > # It is an Open Source Online WYSIWYG Text Editor
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://midhruvjaink.github.io/fire" # the base hostname & protocol for your site
+twitter_username: midhruvjaink
+github_username:  midhruvjaink
+
+# Build settings
+markdown: kramdown
