@@ -1,3 +1,4 @@
+/* UI */
 /*text in the app can be edited*/
 $('.content').each(function(){
     this.contentEditable = true;
@@ -21,3 +22,11 @@ $(".files").draggable({
       .addClass("fa-trash");
   }
 });*/
+
+/*file save*/
+$("#download").click( function() {
+  content = $("#fileContent").text();
+  filename = $("#filename").val();
+  blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, filename);
+});

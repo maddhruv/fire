@@ -83,8 +83,8 @@ button span {
   font-size: 14px;
 }
 #trash{
-  right: 30px;
-  bottom: 30px;
+  right: 15px;
+  top: 15px;
 
   text-shadow: 0 0 8px #333;
 }
@@ -175,6 +175,42 @@ button span {
 
   font-weight: bold;
 }
+span.address {
+  width:300px;
+  margin-left:5px;
+  display:inline-block;
+  background:#fff;
+  line-height:23px;
+  padding:0;
+  text-align:center;
+  position:relative;
+  border-radius: 2px;
+}
+span.address > input {
+  font-size:12px;
+  color:#505050;
+  border:none;
+  background:none;
+  text-align:center;
+  position:relative;
+  width:200px;
+}
+span.address > input:focus {
+  outline:none;
+}
+span.address > input.class {
+  text-align:left;
+}
+#download{
+  float:right;
+  color: #505050;
+  cursor: pointer;
+  font-size: 20px;
+}
+#download:hover{
+  color: #147CFF;
+}
+
 .info {
   float: right;
 
@@ -197,4 +233,6 @@ button span {
 }
 .content {
   margin-top: 40px;
+  max-height: 390px;
+  overflow-y: scroll;
 }
