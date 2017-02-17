@@ -1,19 +1,24 @@
 /* UI */
 /*text in the app can be edited*/
-$('.content').each(function(){
+$('.content').each(function() {
     this.contentEditable = true;
 });
 
 /*app and icons draggable*/
 $(".app").draggable({
-  handle: ".top",
-  scroll: false
+    handle: ".top",
+    scroll: false
 });
 
 $(".files").draggable({
-  scroll: false,
-  cancel: false
+    scroll: false,
+    cancel: false
 });
+
+function loader() {
+    $(".fire").hide();
+    $("#mainDesktop").show();
+}
 
 /*$("#trash").droppable({
   drop: function( event, ui ) {
@@ -24,9 +29,11 @@ $(".files").draggable({
 });*/
 
 /*file save*/
-$("#download").click( function() {
-  content = $("#fileContent").text();
-  filename = $("#filename").val();
-  blob = new Blob([content], {type: "text/plain;charset=utf-8"});
-  saveAs(blob, filename);
+$("#download").click(function() {
+    content = $("#fileContent").text();
+    filename = $("#filename").val();
+    blob = new Blob([content], {
+        type: "text/plain;charset=utf-8"
+    });
+    saveAs(blob, filename);
 });
