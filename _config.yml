@@ -12,3 +12,4 @@ markdown: kramdown
 exclude:
   - CNAME
   - LICENSE
+  - vendor
