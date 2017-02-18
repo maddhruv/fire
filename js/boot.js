@@ -80,7 +80,7 @@ function getInfo() {
         photoURL = response.picture.data.url;
         $("#user-login-avatar").attr("src", photoURL);
         $("#user-login-uname").html(response.first_name);
-        $("#.mac-username").html(response.first_name);
+        $(".mac-username").html(response.first_name);
     });
     console.log(userId);
 }
