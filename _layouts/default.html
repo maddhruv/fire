@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body onload="loader()">
+<body>
     {% include boot.html %} {% include login.html %}
     <div id="mainDesktop" class="display_none">
         {% include topbar.html %}
@@ -33,7 +33,6 @@
 
         ga('create', 'UA-92187865-1', 'auto');
         ga('send', 'pageview');
-        ga('set', 'userId', {{USER_ID}});
     </script>
 </body>
 
