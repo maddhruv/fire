@@ -56,8 +56,6 @@ body {
 .mac-username{
   position: fixed;
   right: 100px;
-
-  font-family: 'Open Sans', sans-serif;
 }
 
 /*desktop*/
@@ -251,4 +249,163 @@ span.address > input.class {
 
   max-height: 390px;
   margin-top: 40px;
+}
+
+/*dock*/
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 53px;
+  width: 420px;
+  box-sizing: border-box;
+  padding: 4px;
+  background: rgba(89, 108, 103, 0.8);
+  transform: translateX(-50%);
+  border-radius: 5px 5px 0 0;
+}
+
+nav hr {
+  display: inline-block;
+  width: 1px;
+  background: #274846;
+  height: 85%;
+  vertical-align: top;
+  margin-top: 3px;
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+nav .icon {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  transition: 0.5s;
+}
+
+nav img {
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+}
+
+label {
+  position: absolute;
+  margin-top: -50px;
+  color: #050505;
+  font-family: Helvetica, calibri, sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  background: #F6F6F6;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 100;
+  display: none;
+}
+
+label::before,
+label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  background: #F6F6F6;
+  z-index: -1;
+}
+
+label::before {
+  bottom: -5px;
+  transform: translateX(-50%) rotateZ(45deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+label::after {
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 40px;
+  height: 20px;
+}
+
+nav .icon:hover > label {
+  display: block;
+  opacity: 0.75;
+}
+
+nav .icon:focus {
+  outline: none;
+  -webkit-animation: translate-animation 2.5s linear;
+  -moz-animation: translate-animation 2.5s linear;
+  animation: translate-animation 2.5s linear;
+}
+
+nav .icon:focus .dot {
+  transform: translate(0, 0);
+  -webkit-animation: translate-animation-reverse 2.5s linear;
+  -moz-animation: translate-animation-reverse 2.5s linear;
+  animation: translate-animation-reverse 2.5s linear;
+}
+
+nav .icon:focus .dot::before {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+}
+
+@keyframes translate-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, -15px);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(0, -15px);
+  }
+  80% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes translate-animation-reverse {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, 15px);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(0, 15px);
+  }
+  80% {
+    transform: translate(0, 0);
+  }
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  nav {
+    background: none;
+    -webkit-backdrop-filter: saturate(50%) blur(20px) brightness(200%);
+    backdrop-filter: saturate(50%) blur(20px) brightness(200%)
+  }
 }

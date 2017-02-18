@@ -2,7 +2,7 @@ userId = "";
 
 $(document).ready(function() {
     var width = 0;
-    var id = setInterval(frame, 70);
+    var id = setInterval(frame, 30);
 
     function frame() {
         if (width >= 100) {
