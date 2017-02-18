@@ -15,22 +15,9 @@ $(".files").draggable({
     cancel: false
 });
 
-function loader() {
-    //$("#boot-screen").hide();
-    //$("#mainDesktop").show();
-}
-
-/*$("#trash").droppable({
-  drop: function( event, ui ) {
-    $(this)
-      .removeClass("fa-trash-o")
-      .addClass("fa-trash");
-  }
-});*/
-
 /*file save*/
 $("#download").click(function() {
-    content = $("#fileContent").text();
+    content = $("#codeeditor").text();
     filename = $("#filename").val();
     blob = new Blob([content], {
         type: "text/plain;charset=utf-8"

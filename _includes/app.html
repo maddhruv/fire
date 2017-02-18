@@ -13,10 +13,14 @@
         </div>
         <div class="clear"></div>
     </div>
-    <div class="main">
-        <div class="content" id="fileContent">
-            <h1>Title</h1>
-            <p>Content</p>
-        </div>
+    <div class="main" id="codeeditor">
     </div>
+    <script type="text/javascript">
+        var editor = CodeMirror(document.getElementById("codeeditor"), {
+            mode: "css",
+            indentUnit: 4,
+            tabSize: 5,
+            autofocus: true
+        });
+    </script>
 </div>

@@ -12,7 +12,7 @@ body {
 #mainDesktop{
   height: 100vh;
 
-  background: url(../images/bg-mac.jpg);
+  background: url(../images/bg-mac-min.jpg);
   background-repeat: none;
   background-size: cover;
 }
@@ -239,12 +239,10 @@ span.address > input.class {
 }
 .main {
   position: relative;
-
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  padding: 20px 50px 40px;
 
   background: #f9f8f7;
 }
