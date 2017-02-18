@@ -16,8 +16,8 @@ $(".files").draggable({
 });
 
 function loader() {
-    $(".fire").hide();
-    $("#mainDesktop").show();
+    //$("#boot-screen").hide();
+    //$("#mainDesktop").show();
 }
 
 /*$("#trash").droppable({
