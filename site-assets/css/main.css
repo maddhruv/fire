@@ -16,48 +16,6 @@ body {
   background-repeat: none;
   background-size: cover;
 }
-/*topbar*/
-.topbar{
-  z-index:999;
-
-  width:100%;
-  height: 27px;
-  padding-left: 25px;
-
-  border-radius: 0px 5px 0px;
-  background: rgba(255,255,255,0.8);
-  -webkit-box-shadow: 3px 3px 50px 6px #696969;
-  -moz-box-shadow:    3px 3px 50px 6px #696969;
-  box-shadow:         3px 3px 50px 6px #696969;
-
-  font-size: 20px;
-  line-height: 1.2;
-}
-.topbar-icons{
-  padding-top: 3px;
-
-  font-size: 0.8em;
-}
-.grey-text{
-  color: grey;
-}
-.mac-settings{
-  position: fixed;
-  right: 10px;
-}
-.mac-user{
-  position: fixed;
-  right: 40px;
-}
-.mac-search{
-  position: fixed;
-  right: 70px;
-}
-.mac-username{
-  position: fixed;
-  right: 100px;
-}
-
 /*desktop*/
 button {
   position: absolute;

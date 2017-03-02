@@ -1,9 +1,30 @@
 <div id="boot-screen">
     <div id="boot-logo">
-        <i class="fa boot-apple fa-apple white-text"></i>
+        <i class="fa boot fa-superpowers"></i>
     </div>
-    <div class="booting-bar">
-        <div id="booting">
-        </div>
+    <div id="toggle-strip">
+        <p class="white-text">Press <span class="key-button">F</span> to enter full screen</p>
     </div>
 </div>
+<script type="text/javascript">
+document.addEventListener("keydown", function(e) {
+  if (e.keyCode == 70) {
+    toggleFullScreen();
+  }
+}, false);
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.webkitRequestFullScreen();
+      $("#toggle-strip").hide();
+    } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+      $("#toggle-strip").show();
+    }
+  }
+}
+setInterval(function(){
+  $("#boot-screen").hide();
+  $("#login-screen").show();
+}, 200);
+</script>

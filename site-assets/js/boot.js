@@ -7,7 +7,7 @@ $(document).ready(function() {
     function frame() {
         if (width >= 100) {
             clearInterval(id);
-            loginToggle();
+            //loginToggle();
         } else {
             width++;
             $("#booting").css('width', width + '%');
