@@ -1,4 +1,4 @@
-// out: ../css/styles.css, sourcemap: true, compress: true
+// out: ../css/styles.css, compress: true
 
 @import "color.less";
 
@@ -31,24 +31,20 @@
 #toggle-strip{
   position: relative;
   top: 60%;
-  max-width: 260px;
+  max-width: 350px;
   margin: 0 auto;
   padding: 2px 20px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
+  color: @login-screen-light;
+  word-spacing: -5px;
 }
 .key-button{
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 2px;
   padding: 5px 10px;
-}
-#login-screen{
-  height: 100vh;
-  background: url(../images/bg_med.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 //topbar
 .topbar{
@@ -66,4 +62,61 @@
 #time{
   color: @topbar-p-color;
   margin-left: 46%;
+}
+.f_right{
+  float: right;
+  padding: 4px 10px;
+  color: @topbar-p-color;
+}
+#power{
+  padding-right: 30px;
+}
+
+#login-screen{
+  position: relative;
+  height: 100vh;
+  background: url(../images/bg_med.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#login-screen-time{
+  position: relative;
+  top: 10%;
+  left: 10%;
+  max-width: 300px;
+  height: 100px;
+}
+#login-screen-time > div{
+  display: inline-block;
+}
+#login-screen-hr{
+  width: 200px;
+  color: @login-screen-light;
+  font-size: 72px;
+  letter-spacing: -4px;
+  height: 100px;
+}
+#login-screen-date{
+  width: 90px;
+  color: @login-screen-dark;
+  font-size: 20px;
+  font-weight: bold;
+  word-spacing: -10px;
+  height: 60px;
+}
+#login-screen-weather{
+  position: relative;
+  top: -50px;
+  left: 43%;
+  max-width: 200px;
+  height: 100px;
+  text-align: center;
+}
+#login-screen-weather > div{
+  display: inline-block;
+}
+#login-screen-temp{
+  color: @login-screen-light;
+  font-size: 42px;
+  text-align: center;
 }

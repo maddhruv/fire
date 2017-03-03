@@ -1,4 +1,3 @@
-userId = "";
 
 $(document).ready(function() {
     var width = 0;

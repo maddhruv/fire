@@ -13,24 +13,100 @@
             <i class="fa fa-chevron-circle-right display_none" id="get-in"></i>
         </div>
     </div>-->
+    <div id="login-screen-time">
+      <div id="login-screen-hr">
+      </div>
+      <div id="login-screen-date">
+        <span id="login-screen-day"></span><br>
+        <span id="login-screen-today"></span>
+      </div>
+    </div>
+
+    <div id="login-screen-weather">
+      <div id="login-screen-temp"></div>
+      <div id="login-screen-weather-icon">
+        <img id="weather-icon" src=" "/>
+      </div>
+    </div>
     <script type="text/javascript">
+      day = new Date();
+      function refreshTime(){
+        h = day.getHours();
+        m = day.getMinutes();
+        if(m<10){
+          m = "0"+m;
+        }
+        topTime = today + " " +  h + ":" + m;
+        $("#time").html(topTime);
+        loginTime = h + ":" + m;
+        $("#login-screen-hr").html(loginTime);
+        setInterval(function() {
+          refreshTime();
+        }, 6000);
+      }
       $(document).ready(function() {
-        day = new Date();
         days = ["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
         today = days[day.getDay()];
-        function refreshTime(){
-          h = day.getHours();
-          m = day.getMinutes();
-          re = today + " " +  h + ":" + m;
-          $("#time").html(re);
-          setInterval(function() {
-            refreshTime();
-          }, 6000);
-        }
+        months = ["Dec", "Jan", "Feb", "Mar", "Apr", "June", "July", "Aug", "Sept", "Oct", "Nov"];
+        loginDay = day.getDate()+" "+months[day.getMonth()];
+        $("#login-screen-today").html(loginDay);
+        $("#login-screen-day").html(today);
         refreshTime();
-        $.getJSON('http://ipinfo.io', function(data){
-          console.log(data)
-        });
+        geoSuccess = function(position) {
+          pos = position;
+          lat = pos.coords.latitude;
+          long = pos.coords.longitude;
+          weatherLink = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&units=metric&APPID=02af372667da5a7a9e3b8a9a9bdfbc9b";
+          $.getJSON(weatherLink , function(data){
+            temperature = data.main.temp;
+            temperature = temperature + "&degC";
+            $("#login-screen-temp").html(temperature);
+            icon = "";
+            switch (data.weather[0].icon) {
+              case "01d":
+              case "01n":
+                icon = "sunny";
+                break;
+              case "02d":
+              case "02n":
+                icon = "sclouds";
+                break;
+              case "03d":
+              case "03n":
+                icon = "sclouds";
+                break;
+              case "04d":
+              case "04n":
+                icon = "bclouds";
+                break;
+              case "09d":
+              case "09n":
+                icon = "shower";
+                break;
+              case "10d":
+              case "10n":
+                icon = "raining";
+                break;
+              case "11d":
+              case "11n":
+                icon = "storm";
+                break;
+              case "13d":
+              case "13n":
+                icon = "snowing";
+                break;
+              case "50d":
+              case "50n":
+                icon = "wind";
+                break;
+              default:
+                icon = "sunny";
+            }
+            icon = "site-assets/icons/"+icon+".png";
+            $("#weather-icon").attr("src", icon);
+          })
+        };
+        navigator.geolocation.getCurrentPosition(geoSuccess);
       })
     </script>
 </div>
