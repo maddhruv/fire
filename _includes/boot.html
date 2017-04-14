@@ -1,25 +1,3 @@
-<div id="boot-screen">
+<div id="boot-screen" class="">
     <h1>Sparking Fire...</h1>
 </div>
-<script type="text/javascript">
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 70) {
-    toggleFullScreen();
-  }
-}, false);
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-      document.documentElement.webkitRequestFullScreen();
-      $("#toggle-strip").hide();
-    } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-      $("#toggle-strip").show();
-    }
-  }
-}
-/*setInterval(function(){
-  $("#boot-screen").hide();
-  $("#login-screen").show();
-}, 2000);*/
-</script>

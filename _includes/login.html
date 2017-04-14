@@ -1,4 +1,6 @@
-<div id="login-screen" class="display_none noselect">
+<div id="loginscreen" class="display_none noselect">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <!--<div id="login-panel">
         <div id="user-login-icon">
             <img src="images/default_avatar.jpg" id="user-login-avatar" width="72px" class="img-circle" />
@@ -29,22 +31,26 @@
       </div>
     </div>
     <script type="text/javascript">
-      day = new Date();
       function refreshTime(){
+        day = new Date();
         h = day.getHours();
         m = day.getMinutes();
         if(m<10){
           m = "0"+m;
         }
-        topTime = today + " " +  h + ":" + m;
-        $("#time").html(topTime);
+        //topTime = today + " " +  h + ":" + m;
+        //$("#time").html(topTime);
         loginTime = h + ":" + m;
         $("#login-screen-hr").html(loginTime);
-        setInterval(function() {
+        setInterval(function(){
+          console.log("update time");
           refreshTime();
-        }, 6000);
+        }, 60000);
       }
+    </script>
+    <script type="text/javascript" async>
       $(document).ready(function() {
+        day = new Date();
         days = ["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
         today = days[day.getDay()];
         months = ["Dec", "Jan", "Feb", "Mar", "Apr", "June", "July", "Aug", "Sept", "Oct", "Nov"];
@@ -108,5 +114,9 @@
         };
         navigator.geolocation.getCurrentPosition(geoSuccess);
       })
+      setInterval(function(){
+        $("#boot-screen").hide();
+        $("#loginscreen").show();
+      }, 2000);
     </script>
 </div>

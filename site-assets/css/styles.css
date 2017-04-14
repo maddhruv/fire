@@ -7,6 +7,9 @@ body{
 *{
   font-family: 'Source Code Pro',monospace;
 }
+/***************
+**splash screen**
+****************/
 #boot-screen{
   position: relative;
 
@@ -52,7 +55,7 @@ body{
 }#power
 {
     padding-right: 30px;
-}#login-screen
+}#loginscreen
 {
     position: relative;height: 100vh;background: url(../images/bg_med.jpg);background-repeat: no-repeat;background-size: cover;
 }#login-screen-time
