@@ -1,0 +1,27 @@
+<div class="app">
+    <div class="top">
+        <div class="buttons">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <span class="address">
+          <input type="text" value="fire.txt" class="address" editable="true" id="filename" ng-model="filename">
+        </span>
+        <div id="download">
+            <i class="fa fa-cloud-download"></i>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="main" id="codeeditor">
+    </div>
+    <script type="text/javascript">
+        var editor = CodeMirror(document.getElementById("codeeditor"), {
+            mode: "css",
+            indentUnit: 4,
+            tabSize: 5,
+            autofocus: true,
+            theme: "material"
+        });
+    </script>
+</div>

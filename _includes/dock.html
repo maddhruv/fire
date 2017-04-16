@@ -5,8 +5,8 @@
     <div class="dot"></div>
   </div>
   <div class="icon" tabindex="0">
-    <label>LaunchPad</label>
-    <img src="site-assets/images/icons/launchpad-icon.png"/>
+    <label>Editor</label>
+    <img id="editor" src="site-assets/images/icons/editor-icon.png"/>
     <div class="dot"></div>
   </div>
   <div class="icon" tabindex="0">
@@ -46,3 +46,10 @@
     <div class="dot"></div>
   </div>
 </nav>
+<script>
+  $("#editor").on('click', function(event) {
+    $("#app-window").load('/app/editor.html');
+    event.preventDefault();
+    /* Act on the event */
+  });
+</script>
