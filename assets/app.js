@@ -4,6 +4,5 @@ var myCodeMirror = CodeMirror(document.body, {
   mode: "javascript",
   theme: "dracula",
   indentUnit: 4,
-  allowFileDropTypes: ['html', 'css', 'js', 'json', 'py'],
-
+  allowFileDropTypes: ['html', 'css', 'js', 'json', 'py']
 });

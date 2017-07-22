@@ -4,7 +4,7 @@
   "description": "It is an Open Source Online WYSIWYG Text Editor :fire: [![Build Status](https://travis-ci.org/midhruvjaink/fire.svg?branch=master)](https://travis-ci.org/midhruvjaink/fire)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node index.js",
     "start": "nodemon index.js"
   },
   "repository": {
