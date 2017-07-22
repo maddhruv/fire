@@ -1,0 +1,27 @@
+{
+  "name": "fire",
+  "version": "0.0.1",
+  "description": "It is an Open Source Online WYSIWYG Text Editor :fire: [![Build Status](https://travis-ci.org/midhruvjaink/fire.svg?branch=master)](https://travis-ci.org/midhruvjaink/fire)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maddhruv/fire.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maddhruv/fire/issues"
+  },
+  "homepage": "https://github.com/maddhruv/fire#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "codemirror": "^5.30.0"
+  }
+}
