@@ -1,4 +1,4 @@
-var myCodeMirror = CodeMirror(document.body, {
+var myEditor = CodeMirror(document.getElementById("editor"), {
   lineNumbers: true,
   value: "function hello(){return 'hello world, from Fire';}\n",
   mode: "javascript",

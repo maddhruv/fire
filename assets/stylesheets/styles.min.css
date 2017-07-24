@@ -1,0 +1,1 @@
+body{padding:0;margin:0;background:url("../img/bg__med.jpg");background-repeat:no-repeat;background-size:cover}#taskbar{height:23px;position:absolute;z-index:3;width:100vw;background:rgba(0,0,0,0.7);box-shadow:0 0 15px rgba(0,0,0,0.2)}#taskbar .logo{position:relative;top:3px;left:8px}#editor{position:relative;top:100px;left:100px;width:800px;height:600px}
