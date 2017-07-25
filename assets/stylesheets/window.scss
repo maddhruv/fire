@@ -1,0 +1,57 @@
+.window{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid $fd;
+  width: $windows-default-width;
+  height: ($windows-default-width*3)/4;
+  -moz-box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  top: 40px;
+  .top-bar{
+    z-index: 5;
+    padding: 7px 0;
+    position: relative;
+    background: lighten($fd, 5);
+    background: -moz-linear-gradient(top, lighten($fd, 6) 3%, lighten($fd, 5) 100%);
+    background: -webkit-gradient(left top, left bottom,color-stop(3%, lighten($fd, 6)), color-stop(100%, lighten($fd, 5)));
+    background: -webkit-linear-gradient(top, lighten($fd, 6) 3%, lighten($fd, 5) 100%);
+    background: -o-linear-gradient(top, lighten($fd, 6) 3%, lighten($fd, 5) 100%);
+    background: -ms-linear-gradient(top, lighten($fd, 6) 3%, lighten($fd, 5) 100%);
+    background: linear-gradient(to bottom, lighten($fd, 6) 3%, lighten($fd, 5) 100%);
+    overflow: hidden;
+    border-bottom: 1px solid darken($fd, 10);
+    height: $menu-bar-height;
+    & > div{
+      float: left;
+    }
+    .windows-actions{
+      padding: 2px 9px;
+      span{
+        display: inline-block;
+        float: left;
+        width: 8px;
+        height: 8px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 6px;
+        &.close{
+          background: $close;
+        }
+        &.min{
+          background: $min;
+        }
+        &.max{
+          background: $max;
+        }
+      }
+    }
+  }
+}

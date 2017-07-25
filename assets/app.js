@@ -6,3 +6,4 @@ var myEditor = CodeMirror(document.getElementById("editor"), {
   indentUnit: 4,
   allowFileDropTypes: ['html', 'css', 'js', 'json', 'py']
 });
+myEditor.setSize("100%", "100%");
