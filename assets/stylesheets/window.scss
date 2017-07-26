@@ -16,7 +16,7 @@
   .top-bar{
     z-index: 5;
     padding: 7px 0;
-    position: relative;
+    position: fixed;
     background: lighten($fd, 5);
     background: -moz-linear-gradient(top, lighten($fd, 6) 3%, lighten($fd, 5) 100%);
     background: -webkit-gradient(left top, left bottom,color-stop(3%, lighten($fd, 6)), color-stop(100%, lighten($fd, 5)));
@@ -26,12 +26,10 @@
     background: linear-gradient(to bottom, lighten($fd, 6) 3%, lighten($fd, 5) 100%);
     overflow: hidden;
     border-bottom: 1px solid darken($fd, 10);
+    width: $windows-default-width;
     height: $menu-bar-height;
-    & > div{
-      float: left;
-    }
     .windows-actions{
-      padding: 2px 9px;
+      padding-left: 9px;
       span{
         display: inline-block;
         float: left;
@@ -52,6 +50,14 @@
           background: $max;
         }
       }
+    }
+    .title{
+      margin: 0 auto;
+      color: #fff;
+      height: $menu-bar-height;
+      font-size: 0.8rem;
+      text-align: center;
+      vertical-align: super;
     }
   }
 }

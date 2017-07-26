@@ -3,4 +3,5 @@
   position: relative;
   width: 100%;
   height: $windows-default-width - $menu-bar-height;
+  top: $menu-bar-height+14;
 }
