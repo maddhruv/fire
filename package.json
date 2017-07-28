@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maddhruv/fire.git"
+  },
+  "engines": {
+    "node": "6.10.3"
   },
   "author": "Dhruv Jain <dhruvjainpenny@gmail.com",
   "homepage": "https://github.com/maddhruv/fire#readme",
