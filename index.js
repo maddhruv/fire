@@ -3,6 +3,8 @@ const path = require('path');
 
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html'));
 })
@@ -10,4 +12,4 @@ app.get('/', (req, res) => {
 app.use(express.static('node_modules'));
 app.use(express.static('assets'));
 
-app.listen(5634);
+app.listen(app.get('port'));
