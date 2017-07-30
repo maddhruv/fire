@@ -1,8 +1,10 @@
 //compiler
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import 'variables';
 @import 'colors';
 @import 'window';
 @import 'editor';
+@import 'taskbar';
 
 body{
   padding: 0;
@@ -11,20 +13,5 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
-
-#taskbar{
-  height: 23px;
-  position: absolute;
-  z-index: 3;
-  width: 100vw;
-  background: rgba($fd, 0.9);
-  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  .logo{
-    position: relative;
-    top: 3px;
-    left: 8px;
-  }
+  font-family: 'Source Code Pro';
 }
