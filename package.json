@@ -22,7 +22,7 @@
     "url": "https://github.com/maddhruv/fire/issues"
   },
   "devDependencies": {
-    "mocha": "^3.5.3",
+    "mocha": "^4.0.1",
     "nodemon": "^1.12.1"
   },
   "dependencies": {
