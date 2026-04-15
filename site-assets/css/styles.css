@@ -1,11 +1,23 @@
+*{
+  font-family: 'Source Code Pro',monospace;
+}
 body{
+  overflow:hidden;
+
+  height: 100vh;
   margin: 0;
+  margin:0;
   padding: 0;
 
   color: #000;
+
+  font-family: 'Source Code Pro';
 }
-*{
-  font-family: 'Source Code Pro',monospace;
+/***************
+***general******
+***************/
+.display_none{
+  display: none;
 }
 /***************
 **splash screen**
@@ -34,50 +46,102 @@ body{
   font-size: 24px;
   font-weight: lighter;
 }
-.key-button
-{padding: 5px 10px;
+.key-button{
+  padding: 5px 10px;
 
-    border: 1px solid rgba(255,255,255,.8);border-radius: 2px;
-}.topbar
-{position: absolute;z-index: 3;width: 100vw;height: 20px;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 2px;
+}
+.topbar{
+  position: absolute;
+  z-index: 3;
 
-    background-color: transparent;
-}#topbar_logo
-{
-    position: relative;top: 4px;left: 3px;
-}#time
-{margin-left: 46%;
+  width: 100vw;
+  height: 20px;
 
-    color: #fff;
-}.f_right
-{
-    float: right;padding: 4px 10px;color: #fff;
-}#power
-{
-    padding-right: 30px;
-}#loginscreen
-{
-    position: relative;height: 100vh;background: url(../images/bg_med.jpg);background-repeat: no-repeat;background-size: cover;
-}#login-screen-time
-{
-    position: relative;top: 10%;left: 10%;max-width: 300px;height: 100px;
-}#login-screen-time > div
-{
-    display: inline-block;
-}#login-screen-hr
-{
-    width: 200px;height: 100px;letter-spacing: -4px;color: #fafafa;font-size: 72px;
-}#login-screen-date
-{
-    width: 90px;height: 60px;word-spacing: -10px;color: #3d3d45;font-size: 20px;font-weight: bold;
-}#login-screen-weather
-{
-    position: relative;top: -50px;left: 43%;max-width: 200px;height: 100px;text-align: center;
-}#login-screen-weather > div
-{
-    display: inline-block;
-}#login-screen-temp
-{text-align: center;
+  background-color: transparent;
+}
+#topbar_logo{
+  position: relative;top: 4px;left: 3px;
+}
+#time{
+  margin-left: 46%;
 
-    color: #fafafa;font-size: 42px;
+  color: #fff;
+}
+.f_right{
+  float: right;padding: 4px 10px;color: #fff;
+}
+#power{
+  padding-right: 30px;
+}
+#loginscreen{
+  position: relative;
+
+  height: 100vh;
+
+  background: url(../images/bg_med.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#login-screen-time{
+  position: relative;
+  top: 10%;
+  left: 10%;
+
+  max-width: 300px;
+  height: 100px;
+}
+#login-screen-time > div{
+  display: inline-block;
+}
+#login-screen-hr{
+  width: 200px;
+  height: 100px;
+
+  letter-spacing: -4px;
+
+  color: #fafafa;
+
+  font-size: 72px;
+}
+#login-screen-date{
+  width: 90px;
+  height: 60px;
+
+  word-spacing: -10px;
+
+  color: #3d3d45;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+#login-screen-weather{
+  position: relative;
+  top: -50px;
+  left: 43%;
+
+  max-width: 200px;
+  height: 100px;
+
+  text-align: center;
+}
+#login-screen-weather > div{
+  display: inline-block;
+}
+#login-screen-temp{
+  text-align: center;
+
+  color: #fafafa;
+
+  font-size: 42px;
+}
+#login-button>i{
+  position: relative;
+  top: 60%;
+  left: 46%;
+
+  color: grey;
+
+  font-size: 32px;
 }

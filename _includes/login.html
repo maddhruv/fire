@@ -30,6 +30,10 @@
         <img id="weather-icon" src=" "/>
       </div>
     </div>
+
+    <div id="login-button">
+      <i class="fa fa-sign-in"></i>
+    </div>
     <script type="text/javascript">
       function refreshTime(){
         day = new Date();
@@ -43,7 +47,6 @@
         loginTime = h + ":" + m;
         $("#login-screen-hr").html(loginTime);
         setInterval(function(){
-          console.log("update time");
           refreshTime();
         }, 60000);
       }
@@ -113,10 +116,15 @@
           })
         };
         navigator.geolocation.getCurrentPosition(geoSuccess);
+        $("#login-button>i").on('click', function(){
+          $("#loginscreen").hide();
+          $("#mainDesktop").show();
+        })
+        toggle_boot();
       })
-      setInterval(function(){
+      function toggle_boot(){
         $("#boot-screen").hide();
         $("#loginscreen").show();
-      }, 2000);
+      }
     </script>
 </div>

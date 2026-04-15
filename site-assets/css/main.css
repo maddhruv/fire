@@ -1,18 +1,7 @@
-body {
-  overflow:hidden;
-
-  height: 100vh;
-  margin:0;
-
-  font-family: 'Source Code Pro';
-}
-.display_none{
-  display: none;
-}
 #mainDesktop{
   height: 100vh;
 
-  background: url(../images/bg-mac-min.jpg);
+  background: url(../images/bg_large.jpg);
   background-repeat: none;
   background-size: cover;
 }
@@ -215,7 +204,7 @@ nav {
   bottom: 0;
   left: 50%;
   height: 53px;
-  width: 420px;
+  width: 470px;
   box-sizing: border-box;
   padding: 4px;
   background: rgba(89, 108, 103, 0.8);
